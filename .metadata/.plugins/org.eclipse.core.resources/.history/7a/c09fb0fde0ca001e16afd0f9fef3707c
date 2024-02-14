@@ -1,0 +1,9 @@
+package model.dao;
+
+public class DaoDactory {
+
+	public static SellerDao createSellerDao() {
+		
+		return new SllerDaoJDBC();
+	}
+}

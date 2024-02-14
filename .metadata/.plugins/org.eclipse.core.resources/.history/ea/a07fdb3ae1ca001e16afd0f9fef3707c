@@ -1,0 +1,11 @@
+package model.dao;
+
+import model.dao.impl.SallerDaojDBC;
+
+public class DaoFactory {
+
+	public static SallerDao createSellerDao() {
+		
+		return new SallerDaojDBC();
+	}
+}

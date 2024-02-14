@@ -1,0 +1,19 @@
+package model.dao;
+
+import model.dao.impl.SallerDaojDBC;
+
+public class DaoFactory {
+
+	/*
+	 * Esse código Java é um exemplo de uma fábrica de DAOs (Data Access Objects).
+	 * DAOs são classes que encapsulam o acesso aos dados de uma aplicação,
+	 * permitindo a separação clara entre a lógica de negócios e a lógica de acesso
+	 * aos dados.
+	 * 
+	 * Vamos analisar o código linha por linha:
+	 */
+	public static SallerDao createSellerDao() {
+
+		return new SallerDaojDBC();
+	}
+}
