@@ -3,7 +3,6 @@ package application;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Scanner;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
@@ -19,8 +18,6 @@ public class Program {
 		 * dados nosso Resulta retorna como tabela, porém queremos aramazenar na memoria
 		 * objetos associados instanciados em memoria
 		 */
-		
-		Scanner sc = new Scanner(System.in);
 
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 
@@ -50,16 +47,11 @@ public class Program {
 		
 		
 		System.out.println("\n=== TESTE 5: seller Update ===");
-		seller = sellerDao.findById(3);
+		seller = sellerDao.findById(1);
 		seller.setBaseSalary(1000.00);
 		sellerDao.update(seller);
 		System.out.println("Update completed");
 		
-		System.out.println("\n=== TESTE 6: seller Delete ===");
-		System.out.println("Enter id for delete test: ");
-		int id = sc.nextInt();
-		sellerDao.deleteById(id);
-		System.out.println("Deleted completed");
 	}
 
 }

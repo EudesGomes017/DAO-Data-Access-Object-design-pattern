@@ -50,16 +50,14 @@ public class Program {
 		
 		
 		System.out.println("\n=== TESTE 5: seller Update ===");
-		seller = sellerDao.findById(3);
+		seller = sellerDao.findById(1);
 		seller.setBaseSalary(1000.00);
 		sellerDao.update(seller);
 		System.out.println("Update completed");
 		
 		System.out.println("\n=== TESTE 6: seller Delete ===");
 		System.out.println("Enter id for delete test: ");
-		int id = sc.nextInt();
-		sellerDao.deleteById(id);
-		System.out.println("Deleted completed");
+		int id = sc.nextInt();		
 	}
 
 }
