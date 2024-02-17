@@ -48,7 +48,7 @@ public class Program {
 		
 		System.out.println("\n=== TESTE 5: seller Update ===");
 		seller = sellerDao.findById(1);
-		seller.setBaseSalary(1000.00);
+		seller.setName("Eloa gomes");
 		sellerDao.update(seller);
 		System.out.println("Update completed");
 		

@@ -47,10 +47,9 @@ public class Program {
 		
 		
 		System.out.println("\n=== TESTE 5: seller Update ===");
-		seller = sellerDao.findById(1);
-		seller.setBaseSalary(1000.00);
-		sellerDao.update(seller);
-		System.out.println("Update completed");
+		Seller updateSeller = new Seller(null, "Eloa", "Eloa@gmail.com", new Date(), 2000.0, department);
+		sellerDao.update(updateSeller);
+		System.out.println("Insert! New id = " + newSeller.getId());
 		
 	}
 
