@@ -1,0 +1,57 @@
+package model.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.List;
+
+import model.dao.SallerDao;
+import model.entities.Saller;
+
+public class SallerDaojDBC implements SallerDao {
+	
+	private Connection conn;
+
+	
+	public SallerDaojDBC(Connection connection) {
+		
+		this.conn = connection;
+	}
+	@Override
+	public void insert(Saller obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Saller obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteById(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Saller findById(Integer id) {
+		PreparedStatement st = null;
+		try	{
+			st = conn.prepareStatement(
+					"SELECT seller.*,department.Name as DepName "
+					+ "FROM seller INNER JOIN department "
+					+ "ON seller.DepartmentId = department.Id "
+					+ "WHERE seller.Id = ?");
+			
+			st.setInt(1, id);
+		}
+	}
+
+	@Override
+	public List<Saller> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

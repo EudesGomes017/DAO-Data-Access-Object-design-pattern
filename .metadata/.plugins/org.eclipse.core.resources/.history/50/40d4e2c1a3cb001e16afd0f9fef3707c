@@ -1,0 +1,16 @@
+package application;
+
+import model.dao.DaoFactory;
+
+public class Program {
+
+	public static void main(String[] args) {
+	
+		/*na proigramação orientado objetos, quando fazemos as consultas no banco de dados nosso Resulta retorna como tabela,
+		 porém queremos aramazenar na memoria objetos associados instanciados em memoria*/
+		
+		SellerDao sellerDao = DaoFactory.createSellerDao();
+
+	}
+
+}
